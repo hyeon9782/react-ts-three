@@ -1,9 +1,16 @@
+import { useEffect, useRef } from "react";
 import Model from "./Model";
 
 const Room = (props) => {
+  const roomRef = useRef(null);
+
+  useEffect(() => {
+    console.log(roomRef.current);
+    console.log(roomRef.current.position.y);
+  }, [roomRef]);
   return (
     <group>
-      <group rotation={[0, 1, 0]} scale={3}>
+      <group rotation={[0, 1, 0]} scale={2}>
         {/* 벽 */}
         {/* <mesh position={[0, 0, 0]}>
         <boxGeometry args={[10, 10, 10]} />
@@ -15,7 +22,7 @@ const Room = (props) => {
           <meshStandardMaterial color={"red"} />
         </mesh>
         {/* 바닥 */}
-        <mesh position={[0, -5, 0]}>
+        <mesh position={[0, -5, 0]} ref={roomRef}>
           <boxGeometry args={[10, 0.1, 10]} />
           <meshStandardMaterial color="gray" />
         </mesh>
@@ -39,7 +46,7 @@ const Room = (props) => {
         </mesh>
       </group>
       {/* 의자 */}
-      <Model position={[0, -6.8, 0]} url={"chair.glb"} rotation={[0, 3, 0]} />
+      <Model position={[0, 5, 0]} url={"chair.glb"} rotation={[0, 3, 0]} />
     </group>
   );
 };

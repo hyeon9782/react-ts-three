@@ -1,6 +1,7 @@
 import { Canvas } from "@react-three/fiber";
 import Room from "./components/Room";
 import { CameraControls, OrbitControls } from "@react-three/drei";
+import Room2 from "./components/Room2";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <ambientLight intensity={1} />
       <pointLight position={[10, 10, 10]} />
       <Room />
+      {/* <Room2 /> */}
       {/* <OrbitControls makeDefault /> */}
       <CameraControls makeDefault />
     </Canvas>
