@@ -2,23 +2,27 @@ import { Canvas } from "@react-three/fiber";
 import Room from "./components/Room";
 import { CameraControls, OrbitControls } from "@react-three/drei";
 import Room2 from "./components/Room2";
+import Room3 from "./components/Room3";
+import ThreeScene from "./components/ThreeScene";
 
 function App() {
   return (
     <Canvas
       camera={{
-        position: [1, 1, 70],
+        position: [30, 60, 70],
         fov: 75,
         near: 0.1,
-        far: 100,
+        far: 1000,
       }}
     >
       <ambientLight intensity={1} />
       <pointLight position={[10, 10, 10]} />
-      <Room />
+      {/* <Room /> */}
+      <Room3 />
+      {/* <ThreeScene /> */}
       {/* <Room2 /> */}
-      {/* <OrbitControls makeDefault /> */}
-      <CameraControls makeDefault />
+      <OrbitControls makeDefault />
+      {/* <CameraControls makeDefault /> */}
     </Canvas>
   );
 }
