@@ -4,6 +4,7 @@ import { CameraControls, OrbitControls } from "@react-three/drei";
 import Room2 from "./components/Room2";
 import Room3 from "./components/Room3";
 import ThreeScene from "./components/ThreeScene";
+import ObjModel from "./components/OBJModel";
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
       <ambientLight intensity={1} />
       <pointLight position={[10, 10, 10]} />
       {/* <Room /> */}
-      <Room3 />
+      {/* <Room3 /> */}
+      <ObjModel />
       {/* <ThreeScene /> */}
       {/* <Room2 /> */}
       <OrbitControls makeDefault />

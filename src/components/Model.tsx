@@ -89,7 +89,7 @@ const Model = ({ position, rotation, scale, url }: Props) => {
       />
       {active && bbox && (
         <>
-          {/* <Information position={position} rotation={rotation} /> */}
+          <Information position={position} rotation={rotation} />
           <Box box={bbox} scale={scale} />
         </>
       )}
