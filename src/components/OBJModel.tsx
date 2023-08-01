@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import * as THREE from "three";
-import { useLoader, useThree } from "react-three-fiber";
+import { useLoader, useThree } from "@react-three/fiber";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { MTLLoader } from "three/addons/loaders/MTLLoader.js";
 import { OBJLoader } from "three/addons/loaders/OBJLoader.js";
